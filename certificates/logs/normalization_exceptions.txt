@@ -1,0 +1,171 @@
+{
+  "source": "Part IV 4.5.8, two exceptional rank-7 branches",
+  "results": [
+    {
+      "name": "3prime_a",
+      "tested": 1050,
+      "flipped": 490,
+      "failures": [],
+      "states": [
+        {
+          "shape": [
+            5,
+            5,
+            3,
+            1
+          ],
+          "largest": [
+            7,
+            3,
+            2,
+            0
+          ],
+          "count": 1050
+        }
+      ],
+      "intermediate": [
+        {
+          "auxiliaryShape": [
+            6,
+            3,
+            3
+          ],
+          "beforeStar": [
+            7,
+            2,
+            4,
+            1
+          ],
+          "afterStar": [
+            7,
+            3,
+            3,
+            0
+          ],
+          "normalizedReducedShape": [
+            5,
+            5,
+            1,
+            1
+          ],
+          "count": 490
+        },
+        {
+          "auxiliaryShape": [
+            5,
+            3,
+            3,
+            1
+          ],
+          "beforeStar": [
+            7,
+            2,
+            4,
+            1
+          ],
+          "afterStar": [
+            7,
+            3,
+            3,
+            0
+          ],
+          "normalizedReducedShape": [
+            5,
+            5,
+            1,
+            1
+          ],
+          "count": 560
+        }
+      ]
+    },
+    {
+      "name": "6prime_a",
+      "tested": 1050,
+      "flipped": 490,
+      "failures": [],
+      "states": [
+        {
+          "shape": [
+            3,
+            3,
+            3,
+            3,
+            1,
+            1
+          ],
+          "largest": [
+            7,
+            3,
+            3,
+            1
+          ],
+          "count": 1050
+        }
+      ],
+      "intermediate": [
+        {
+          "auxiliaryShape": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1
+          ],
+          "beforeStar": [
+            7,
+            4,
+            2,
+            1
+          ],
+          "afterStar": [
+            7,
+            2,
+            3,
+            1
+          ],
+          "normalizedReducedShape": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "count": 560
+        },
+        {
+          "auxiliaryShape": [
+            4,
+            3,
+            3,
+            1,
+            1
+          ],
+          "beforeStar": [
+            7,
+            4,
+            2,
+            1
+          ],
+          "afterStar": [
+            7,
+            2,
+            3,
+            1
+          ],
+          "normalizedReducedShape": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "count": 490
+        }
+      ]
+    }
+  ]
+}

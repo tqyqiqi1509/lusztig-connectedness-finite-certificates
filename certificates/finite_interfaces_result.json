@@ -1,0 +1,41 @@
+{
+  "trace_inputs": 3549,
+  "trace_operator_steps": 25259,
+  "distinct_trace_permutations": 4905,
+  "tableaux_with_independent_cycle_specialization": 607,
+  "rank7": [
+    {
+      "shape": [
+        5,
+        4,
+        4,
+        1
+      ],
+      "inputs": 1050,
+      "even": 518,
+      "odd": 532,
+      "flips": 490,
+      "all_round_trips": true,
+      "all_prescribed_intermediates": true
+    },
+    {
+      "shape": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "inputs": 1050,
+      "even": 532,
+      "odd": 518,
+      "flips": 490,
+      "all_round_trips": true,
+      "all_prescribed_intermediates": true
+    }
+  ],
+  "failures": 0,
+  "tableau_vs_group_descent_values": 1680,
+  "insertion_transpose_pairs": 432
+}

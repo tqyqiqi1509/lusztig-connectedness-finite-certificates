@@ -1,0 +1,170 @@
+{
+  "utc": "2026-11-12T15:34:10.132Z",
+  "pairs": 3549,
+  "steps": 25259,
+  "ordinary_star_steps": 17445,
+  "D4_steps": 7814,
+  "checks": [
+    "source shape/corner/nv residue",
+    "all listed pair cardinalities and uniqueness",
+    "exact signed permutation transition",
+    "ordinary star adjacency, domain and inverse",
+    "D4 source/target types and four-word definition",
+    "D4 reciprocity",
+    "signed parity at every step",
+    "special recording tableau at every step",
+    "exact full recording tableau at final",
+    "final largest-domino target"
+  ],
+  "statistics": [
+    {
+      "shape": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "residue": 2,
+      "source": [
+        4,
+        1,
+        3,
+        1
+      ],
+      "target": [
+        4,
+        2,
+        2,
+        0
+      ],
+      "pairs": 8,
+      "source_insertions": 1,
+      "all_recordings": 8,
+      "parity_counts": {
+        "even": 5,
+        "odd": 3
+      },
+      "max_path": 1
+    },
+    {
+      "shape": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "residue": 2,
+      "source": [
+        4,
+        2,
+        2,
+        0
+      ],
+      "target": [
+        4,
+        3,
+        1,
+        1
+      ],
+      "pairs": 16,
+      "source_insertions": 2,
+      "all_recordings": 8,
+      "parity_counts": {
+        "even": 10,
+        "odd": 6
+      },
+      "max_path": 1
+    },
+    {
+      "shape": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "residue": 3,
+      "source": [
+        5,
+        1,
+        3,
+        1
+      ],
+      "target": [
+        5,
+        3,
+        2,
+        1
+      ],
+      "pairs": 60,
+      "source_insertions": 3,
+      "all_recordings": 20,
+      "parity_counts": {
+        "even": 27,
+        "odd": 33
+      },
+      "max_path": 3
+    },
+    {
+      "shape": [
+        5,
+        5,
+        3,
+        1
+      ],
+      "residue": 0,
+      "source": [
+        7,
+        3,
+        2,
+        0
+      ],
+      "target": [
+        7,
+        2,
+        4,
+        0
+      ],
+      "pairs": 1995,
+      "source_insertions": 19,
+      "all_recordings": 105,
+      "parity_counts": {
+        "even": 931,
+        "odd": 1064
+      },
+      "max_path": 10
+    },
+    {
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "residue": 3,
+      "source": [
+        7,
+        4,
+        2,
+        0
+      ],
+      "target": [
+        7,
+        3,
+        3,
+        1
+      ],
+      "pairs": 1470,
+      "source_insertions": 14,
+      "all_recordings": 105,
+      "parity_counts": {
+        "even": 784,
+        "odd": 686
+      },
+      "max_path": 9
+    }
+  ],
+  "failures": 0,
+  "examples": []
+}

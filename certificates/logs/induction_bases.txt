@@ -1,0 +1,32 @@
+[
+  {
+    rank: 2,
+    elements: 8,
+    operator_arrows: 0,
+    components: 8,
+    S_parity_fibers: 8,
+    split_fibers: 0,
+    mixed_components: 0,
+    failures: []
+  },
+  {
+    rank: 3,
+    elements: 48,
+    operator_arrows: 64,
+    components: 20,
+    S_parity_fibers: 20,
+    split_fibers: 0,
+    mixed_components: 0,
+    failures: []
+  },
+  {
+    rank: 4,
+    elements: 384,
+    operator_arrows: 1152,
+    components: 72,
+    S_parity_fibers: 72,
+    split_fibers: 0,
+    mixed_components: 0,
+    failures: []
+  }
+]

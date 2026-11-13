@@ -1,0 +1,20 @@
+// Certificate replay, with no graph search or lower-rank induction.
+const fs=require('fs'),d=require('../finite_d_domino/domino_runtime.cjs');
+const assert=require('node:assert/strict');
+function adjacentStar(a,b,n) {
+  return Number.isInteger(a) && Number.isInteger(b) &&
+    a >= 0 && b >= 0 && a < n && b < n &&
+    ((Math.min(a,b) === 0 && Math.max(a,b) === 2) ||
+     (Math.min(a,b) >= 1 && Math.abs(a-b) === 1));
+}
+const z=JSON.parse(fs.readFileSync(__dirname+'/boxed459_finite_complete.json','utf8'));
+function d4type(w){const ds=d.desc(w),ou=[0,1,3],cc=2;for(const b of ou){const [g,e]=ou.filter(x=>x!==b);if(ds[b]&&ds[cc]&&!ds[g]&&!ds[e]&&d.star(w,g,cc).join()!==d.star(w,e,cc).join())return['A',b];if(!ds[b]&&!ds[cc]&&ds[g]&&ds[e]&&d.star(w,cc,g).join()!==d.star(w,cc,e).join())return['B',b];}if(ou.every(b=>ds[b])&&!ds[cc]&&ou.map(b=>d.star(w,cc,b).join()).every((x,_,a)=>x===a[0]))return['C',null];if(ou.every(b=>!ds[b])&&ds[cc]&&ou.map(b=>d.star(w,b,cc).join()).every((x,_,a)=>x===a[0]))return['D',null];return null;}
+const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function d4edges(w){const t=d4type(w);if(!t)return[];const ou=[0,1,3],out=[];for(const b of t[1]===null?ou:[t[1]]){const [g,e]=ou.filter(x=>x!==b);const target={A:['D',null],B:['C',null],C:['B',b],D:['A',b]}[t[0]],words=[[b],t[1]===null?[g,e,2]:[2,g,e],[2,e,2],[2,g,2]];for(const word of words){let v=w.slice();for(let i=word.length-1;i>=0;i--)v=d.left(v,word[i]);if(equal(d4type(v),target))out.push({v,word});}}return out;}
+let pairs=0,steps=0,d4steps=0,ordinary=0;const stats=[],failures=[];
+for(const c of z.cases){const seen=new Set();for(const tr of c.traces){pairs++;const wk=tr.initial.join();if(seen.has(wk))failures.push('duplicate initial '+wk);seen.add(wk);let w=tr.initial,rr=d.rs(w),qkey=d.key(rr.right),parity=w.filter(x=>x<0).length%2;if(!equal(d.shape(rr.left),c.shape)||!equal(d.list(rr.left).at(-1),c.source)||d.vcount(rr.left)%4!==c.residue)failures.push('initial hypotheses '+wk);
+ for(const op of tr.path){assert(op.kind==='star'||op.kind==='D4','unknown operator kind');steps++;let v;if(op.kind==='star'){assert(adjacentStar(op.a,op.b,w.length),'nonadjacent star roots');ordinary++;v=d.star(w,op.a,op.b);if(!equal(d.star(v,op.b,op.a),w))failures.push('irreversible star');}else{d4steps++;if(!equal(d4type(w),op.source))failures.push('D4 source type');let hits=d4edges(w).filter(x=>equal(x.word,op.word)&&equal(x.v,op.output));if(hits.length!==1)failures.push('inadmissible D4 step '+wk);v=op.output;if(!equal(d4type(v),op.target))failures.push('D4 target type');if(!d4edges(v).some(x=>equal(x.v,w)))failures.push('nonreciprocal D4 step');}if(!equal(v,op.output))failures.push('step endpoint');if(v.filter(x=>x<0).length%2!==parity)failures.push('group parity changed');const vr=d.rs(v);if(d.key(d.special(vr.right))!==qkey)failures.push('special Q changed');w=v;}
+ rr=d.rs(w);if(!equal(w,tr.final)||!equal(d.list(rr.left).at(-1),c.target)||d.key(rr.right)!==qkey)failures.push('final target '+wk);}
+ if(seen.size!==c.pair_count)failures.push('coverage mismatch');stats.push({shape:c.shape,residue:c.residue,source:c.source,target:c.target,pairs:c.pair_count,source_insertions:c.insertion_count,all_recordings:c.recording_count,parity_counts:c.parity_counts,max_path:c.max_path});}
+const out={utc:new Date().toISOString(),pairs,steps,ordinary_star_steps:ordinary,D4_steps:d4steps,checks:['source shape/corner/nv residue','all listed pair cardinalities and uniqueness','exact signed permutation transition','ordinary star adjacency, domain and inverse','D4 source/target types and four-word definition','D4 reciprocity','signed parity at every step','special recording tableau at every step','exact full recording tableau at final','final largest-domino target'],statistics:stats,failures:failures.length,examples:failures.slice(0,30)};
+fs.writeFileSync(__dirname+'/boxed459_finite_replay.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out,null,2));if(failures.length)process.exit(1);

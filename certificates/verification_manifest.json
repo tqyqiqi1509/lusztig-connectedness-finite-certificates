@@ -1,0 +1,858 @@
+{
+  "started_utc": "2026-11-12T15:34:07.682446+00:00",
+  "python_version": "3.12.14",
+  "node_version": "v24.22.1",
+  "scope": "Finite inputs of the type D induction; no extrapolation to larger ranks",
+  "jobs": [
+    {
+      "name": "d4_paths",
+      "status": "passed",
+      "result_file": "d4_paths_result.json",
+      "summary": {
+        "group_order": 192,
+        "left_cells": 36,
+        "kl_polynomial_pairs": 9817,
+        "directed_operator_arrows": 192,
+        "path_lengths": {
+          "1": 84,
+          "3": 108
+        },
+        "failures": 0
+      }
+    },
+    {
+      "name": "kl_bar_characterization",
+      "status": "passed",
+      "result_file": "verify_kl_bar.json",
+      "summary": {
+        "bar_invariant_triangular_KL_basis_elements": 192,
+        "inverse_position_descent_comparisons": 768,
+        "method": "Hecke bar involution; no second KL recurrence used",
+        "failures": 0
+      }
+    },
+    {
+      "name": "fork_compatibility",
+      "status": "passed",
+      "result_file": "finite_d_domino/fork_star_compatibility.json",
+      "summary": {
+        "elements": 48,
+        "descentValues": 144,
+        "transposePairs": 48,
+        "domainElements": 32,
+        "directCases": 14,
+        "closureArrows": 32,
+        "failures": []
+      }
+    },
+    {
+      "name": "d4_tableau_compatibility",
+      "status": "passed",
+      "result_file": "finite_d_domino/d4_tableau_compatibility.json",
+      "summary": {
+        "signCycleChecks": 384,
+        "descentValues": 1536,
+        "transposePairs": 384,
+        "operatorInputs": 60,
+        "operatorArrows": 96,
+        "failures": []
+      }
+    },
+    {
+      "name": "induction_bases",
+      "status": "passed",
+      "result_file": "finite_d_domino/induction_base_certificate.json",
+      "summary": [
+        {
+          "rank": 2,
+          "elements": 8,
+          "operator_arrows": 0,
+          "components": 8,
+          "S_parity_fibers": 8,
+          "split_fibers": 0,
+          "mixed_components": 0,
+          "failures": []
+        },
+        {
+          "rank": 3,
+          "elements": 48,
+          "operator_arrows": 64,
+          "components": 20,
+          "S_parity_fibers": 20,
+          "split_fibers": 0,
+          "mixed_components": 0,
+          "failures": []
+        },
+        {
+          "rank": 4,
+          "elements": 384,
+          "operator_arrows": 1152,
+          "components": 72,
+          "S_parity_fibers": 72,
+          "split_fibers": 0,
+          "mixed_components": 0,
+          "failures": []
+        }
+      ]
+    },
+    {
+      "name": "normalization_exceptions",
+      "status": "passed",
+      "result_file": "finite_d_domino/prop458_exception_certificate.json",
+      "summary": [
+        {
+          "name": "3prime_a",
+          "tested": 1050,
+          "flipped": 490,
+          "failures": [],
+          "states": [
+            {
+              "shape": [
+                5,
+                5,
+                3,
+                1
+              ],
+              "largest": [
+                7,
+                3,
+                2,
+                0
+              ],
+              "count": 1050
+            }
+          ],
+          "intermediate": [
+            {
+              "auxiliaryShape": [
+                6,
+                3,
+                3
+              ],
+              "beforeStar": [
+                7,
+                2,
+                4,
+                1
+              ],
+              "afterStar": [
+                7,
+                3,
+                3,
+                0
+              ],
+              "normalizedReducedShape": [
+                5,
+                5,
+                1,
+                1
+              ],
+              "count": 490
+            },
+            {
+              "auxiliaryShape": [
+                5,
+                3,
+                3,
+                1
+              ],
+              "beforeStar": [
+                7,
+                2,
+                4,
+                1
+              ],
+              "afterStar": [
+                7,
+                3,
+                3,
+                0
+              ],
+              "normalizedReducedShape": [
+                5,
+                5,
+                1,
+                1
+              ],
+              "count": 560
+            }
+          ]
+        },
+        {
+          "name": "6prime_a",
+          "tested": 1050,
+          "flipped": 490,
+          "failures": [],
+          "states": [
+            {
+              "shape": [
+                3,
+                3,
+                3,
+                3,
+                1,
+                1
+              ],
+              "largest": [
+                7,
+                3,
+                3,
+                1
+              ],
+              "count": 1050
+            }
+          ],
+          "intermediate": [
+            {
+              "auxiliaryShape": [
+                3,
+                3,
+                3,
+                1,
+                1,
+                1
+              ],
+              "beforeStar": [
+                7,
+                4,
+                2,
+                1
+              ],
+              "afterStar": [
+                7,
+                2,
+                3,
+                1
+              ],
+              "normalizedReducedShape": [
+                3,
+                3,
+                2,
+                2,
+                1,
+                1
+              ],
+              "count": 560
+            },
+            {
+              "auxiliaryShape": [
+                4,
+                3,
+                3,
+                1,
+                1
+              ],
+              "beforeStar": [
+                7,
+                4,
+                2,
+                1
+              ],
+              "afterStar": [
+                7,
+                2,
+                3,
+                1
+              ],
+              "normalizedReducedShape": [
+                3,
+                3,
+                2,
+                2,
+                1,
+                1
+              ],
+              "count": 490
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "boxed_paths",
+      "status": "passed",
+      "result_file": "computation/boxed459_finite_replay.json",
+      "summary": {
+        "pairs": 3549,
+        "steps": 25259,
+        "ordinary_star_steps": 17445,
+        "D4_steps": 7814,
+        "statistics": [
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 2,
+            "source": [
+              4,
+              1,
+              3,
+              1
+            ],
+            "target": [
+              4,
+              2,
+              2,
+              0
+            ],
+            "pairs": 8,
+            "source_insertions": 1,
+            "all_recordings": 8,
+            "parity_counts": {
+              "even": 5,
+              "odd": 3
+            },
+            "max_path": 1
+          },
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 2,
+            "source": [
+              4,
+              2,
+              2,
+              0
+            ],
+            "target": [
+              4,
+              3,
+              1,
+              1
+            ],
+            "pairs": 16,
+            "source_insertions": 2,
+            "all_recordings": 8,
+            "parity_counts": {
+              "even": 10,
+              "odd": 6
+            },
+            "max_path": 1
+          },
+          {
+            "shape": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "residue": 3,
+            "source": [
+              5,
+              1,
+              3,
+              1
+            ],
+            "target": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "pairs": 60,
+            "source_insertions": 3,
+            "all_recordings": 20,
+            "parity_counts": {
+              "even": 27,
+              "odd": 33
+            },
+            "max_path": 3
+          },
+          {
+            "shape": [
+              5,
+              5,
+              3,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              7,
+              3,
+              2,
+              0
+            ],
+            "target": [
+              7,
+              2,
+              4,
+              0
+            ],
+            "pairs": 1995,
+            "source_insertions": 19,
+            "all_recordings": 105,
+            "parity_counts": {
+              "even": 931,
+              "odd": 1064
+            },
+            "max_path": 10
+          },
+          {
+            "shape": [
+              3,
+              3,
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 3,
+            "source": [
+              7,
+              4,
+              2,
+              0
+            ],
+            "target": [
+              7,
+              3,
+              3,
+              1
+            ],
+            "pairs": 1470,
+            "source_insertions": 14,
+            "all_recordings": 105,
+            "parity_counts": {
+              "even": 784,
+              "odd": 686
+            },
+            "max_path": 9
+          }
+        ],
+        "failures": 0
+      }
+    },
+    {
+      "name": "boxed_input_coverage",
+      "status": "passed",
+      "result_file": "computation/boxed_coverage_result.json",
+      "summary": {
+        "pairs": 3549,
+        "failures": 0,
+        "method": "Independent adjacent-square deletion recursion; all inverse-RS inputs compared as exact sets",
+        "results": [
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 2,
+            "source": [
+              4,
+              1,
+              3,
+              1
+            ],
+            "target": [
+              4,
+              2,
+              2,
+              0
+            ],
+            "source_tableaux": 1,
+            "recording_tableaux": 8,
+            "expected_pairs": 8,
+            "recorded_pairs": 8,
+            "missing": 0,
+            "extraneous": 0,
+            "parity_counts": {
+              "even": 5,
+              "odd": 3
+            }
+          },
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 2,
+            "source": [
+              4,
+              2,
+              2,
+              0
+            ],
+            "target": [
+              4,
+              3,
+              1,
+              1
+            ],
+            "source_tableaux": 2,
+            "recording_tableaux": 8,
+            "expected_pairs": 16,
+            "recorded_pairs": 16,
+            "missing": 0,
+            "extraneous": 0,
+            "parity_counts": {
+              "even": 10,
+              "odd": 6
+            }
+          },
+          {
+            "shape": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "residue": 3,
+            "source": [
+              5,
+              1,
+              3,
+              1
+            ],
+            "target": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "source_tableaux": 3,
+            "recording_tableaux": 20,
+            "expected_pairs": 60,
+            "recorded_pairs": 60,
+            "missing": 0,
+            "extraneous": 0,
+            "parity_counts": {
+              "even": 27,
+              "odd": 33
+            }
+          },
+          {
+            "shape": [
+              5,
+              5,
+              3,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              7,
+              3,
+              2,
+              0
+            ],
+            "target": [
+              7,
+              2,
+              4,
+              0
+            ],
+            "source_tableaux": 19,
+            "recording_tableaux": 105,
+            "expected_pairs": 1995,
+            "recorded_pairs": 1995,
+            "missing": 0,
+            "extraneous": 0,
+            "parity_counts": {
+              "even": 931,
+              "odd": 1064
+            }
+          },
+          {
+            "shape": [
+              3,
+              3,
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 3,
+            "source": [
+              7,
+              4,
+              2,
+              0
+            ],
+            "target": [
+              7,
+              3,
+              3,
+              1
+            ],
+            "source_tableaux": 14,
+            "recording_tableaux": 105,
+            "expected_pairs": 1470,
+            "recorded_pairs": 1470,
+            "missing": 0,
+            "extraneous": 0,
+            "parity_counts": {
+              "even": 784,
+              "odd": 686
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixed_corner_templates",
+      "status": "passed",
+      "result_file": "fixed_corner_graphs_result.json",
+      "summary": {
+        "configurations": 8,
+        "failures": 0,
+        "results": [
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 0,
+            "corners": [
+              "V(1,3)",
+              "V(3,1)"
+            ],
+            "components": [
+              [
+                "V(1,3)",
+                "V(3,1)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 2,
+            "corners": [
+              "H(2,2)",
+              "V(1,3)",
+              "V(3,1)"
+            ],
+            "components": [
+              [
+                "V(1,3)"
+              ],
+              [
+                "H(2,2)"
+              ],
+              [
+                "V(3,1)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "residue": 1,
+            "corners": [
+              "V(1,3)",
+              "V(3,2)"
+            ],
+            "components": [
+              [
+                "V(1,3)",
+                "V(3,2)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "residue": 3,
+            "corners": [
+              "V(1,3)",
+              "V(3,2)"
+            ],
+            "components": [
+              [
+                "V(1,3)"
+              ],
+              [
+                "V(3,2)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              5,
+              5,
+              3,
+              1
+            ],
+            "residue": 0,
+            "corners": [
+              "H(2,4)",
+              "H(3,2)",
+              "V(1,5)"
+            ],
+            "components": [
+              [
+                "H(3,2)",
+                "V(1,5)"
+              ],
+              [
+                "H(2,4)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              5,
+              5,
+              3,
+              1
+            ],
+            "residue": 2,
+            "corners": [
+              "H(2,4)",
+              "H(3,2)",
+              "V(1,5)"
+            ],
+            "components": [
+              [
+                "H(2,4)",
+                "H(3,2)",
+                "V(1,5)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              3,
+              3,
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 1,
+            "corners": [
+              "H(4,2)",
+              "V(3,3)",
+              "V(5,1)"
+            ],
+            "components": [
+              [
+                "H(4,2)",
+                "V(3,3)",
+                "V(5,1)"
+              ]
+            ]
+          },
+          {
+            "shape": [
+              3,
+              3,
+              3,
+              3,
+              1,
+              1
+            ],
+            "residue": 3,
+            "corners": [
+              "H(4,2)",
+              "V(3,3)",
+              "V(5,1)"
+            ],
+            "components": [
+              [
+                "V(3,3)",
+                "V(5,1)"
+              ],
+              [
+                "H(4,2)"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "finite_interfaces",
+      "status": "passed",
+      "result_file": "finite_interfaces_result.json",
+      "summary": {
+        "trace_inputs": 3549,
+        "trace_operator_steps": 25259,
+        "distinct_trace_permutations": 4905,
+        "tableaux_with_independent_cycle_specialization": 607,
+        "rank7": [
+          {
+            "shape": [
+              5,
+              4,
+              4,
+              1
+            ],
+            "inputs": 1050,
+            "even": 518,
+            "odd": 532,
+            "flips": 490,
+            "all_round_trips": true,
+            "all_prescribed_intermediates": true
+          },
+          {
+            "shape": [
+              3,
+              3,
+              3,
+              2,
+              2,
+              1
+            ],
+            "inputs": 1050,
+            "even": 532,
+            "odd": 518,
+            "flips": 490,
+            "all_round_trips": true,
+            "all_prescribed_intermediates": true
+          }
+        ],
+        "failures": 0,
+        "tableau_vs_group_descent_values": 1680,
+        "insertion_transpose_pairs": 432
+      }
+    }
+  ],
+  "input_sha256": {
+    "computation/boxed459_finite_complete.cjs": "91ff652ee96440801a181e53d97149a76babe2c1fc75177fb1ba6c274004f2f4",
+    "computation/boxed459_finite_complete.json": "deead79c9ec5aa57d53833e869cc1fb85b51350df1b25130924c15eb2f926c94",
+    "computation/boxed459_finite_ops.cjs": "94694ccab6a4c7385acffa47b305dab69da4865c551a27e59dcf93986ae208d8",
+    "computation/boxed459_finite_replay.cjs": "b4a6584b449b1b2348749357dd8738f27fd8b957919a5b572f64c377ead2eb8d",
+    "computation/kl_compute.py": "900d62627db1198b12ba298e3fdd88859a1ad33b5d119f8764dcbe27dfcfa7f0",
+    "computation/verify_boxed_coverage.cjs": "ae51497a501d2f996dc927a3e3aa2bca08eaf3bc262ef725b3ea061f1ef9247a",
+    "finite_d_domino/d4_tableau_compatibility.cjs": "78a83d4b5bf25a3423c25c58c9dfc84901afb6ae13c2ee2895edabeb92372d42",
+    "finite_d_domino/domino_cycles.cjs": "a0a47e5157f11bbe803af15721079303adbb2c81cc474341aaa355d05d2825e4",
+    "finite_d_domino/domino_runtime.cjs": "f623e01d09baec1116a82ec63e9cc48794de6c75635d79d20049f84be8693c80",
+    "finite_d_domino/fork_star_compatibility.cjs": "b7acf6fa7bcf3e91ec52ced549b8f8f035aca8f56296321f41cd3c8e5f33581a",
+    "finite_d_domino/induction_base_certificate.cjs": "8acf044c9667a1922bebee0a7f89dcdc46dfbd717f21ec3e7feee49823b35de2",
+    "finite_d_domino/prop458_exception_certificate.cjs": "b7330ec719aed35f8f56fca6b8b5b13cc1fbb6299af9af12a523c2806de57843",
+    "finite_d_domino/sources/Tableau.js": "b013195d602e9382860b27ea34bcbd97c60fa1af23e1206b368daf1feef0027f",
+    "finite_d_domino/tableau_domain_check.cjs": "ae5cc34d5a38cf04f004e68909e05614c32378072389cdd01e0c61f8e9376406",
+    "run_all.py": "b16d321d380614d9665e41ae62fb4c0ea2a3cdd6a8da87d5991befd47bb1d618",
+    "verify_d4_paths.py": "88a407fac368fcf17f4836175cac99b1fda9d649be2bf5befb684540dc3b8f4e",
+    "verify_finite_interfaces.cjs": "8c6df1f3c50abba505315aa8b78340d908af2b941e7a5f9accfd315a56c92116",
+    "verify_fixed_corner_graphs.py": "33638e11a8bbec8d07b00f0d046cc5e28b290fb64bb391f83da09414b879ce20",
+    "verify_kl_bar.py": "3c4ab46da814d477393f6967874566cde0d32bd957947bc933304aa47d9cd309"
+  },
+  "completed_utc": "2026-11-12T15:34:10.787809+00:00",
+  "status": "all passed"
+}

@@ -1,0 +1,6 @@
+{
+  "bar_invariant_triangular_KL_basis_elements": 192,
+  "inverse_position_descent_comparisons": 768,
+  "method": "Hecke bar involution; no second KL recurrence used",
+  "failures": 0
+}

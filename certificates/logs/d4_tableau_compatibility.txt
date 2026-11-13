@@ -1,0 +1,8 @@
+{
+  signCycleChecks: 384,
+  descentValues: 1536,
+  transposePairs: 384,
+  operatorInputs: 60,
+  operatorArrows: 96,
+  failures: []
+}

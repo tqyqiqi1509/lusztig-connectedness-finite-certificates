@@ -1,0 +1,10 @@
+{
+  rank: 3,
+  elements: 48,
+  descentValues: 144,
+  transposePairs: 48,
+  domainElements: 32,
+  directCases: 14,
+  closureArrows: 32,
+  failures: []
+}
